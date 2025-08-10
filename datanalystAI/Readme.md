@@ -4,6 +4,11 @@
 ### Data Preprocessing
 1. Removing blank columns and rows
 2. Removing unnecessary columns based on entropy, variance and correlation with and without target column if any
+3. Handle missing values	Impute or drop missing data depending on strategy
+4. Normalize column name, Standardize column names for consistency
+5. Convert categorical to numeric, Encode categorical variables (label or one-hot encoding)
+6. Detect and remove duplicate rows, Prevent data leakage or redundancy
+7. Optional scaling, Normalize numeric features for model compatibility
 ### Data Analysis
 1. Basic insights of data (specific to data)
 2. Advanced insights of data (if found any, specific to domain)
