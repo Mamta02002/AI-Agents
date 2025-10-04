@@ -7,7 +7,6 @@ from pandasai import Agent
 import pandasai as pai
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
 import requests
 from openai import OpenAI
 from io import StringIO
@@ -17,7 +16,6 @@ import ast
 import time
 from pathlib import Path
 import shutil
-import os
 import zipfile
 
 
