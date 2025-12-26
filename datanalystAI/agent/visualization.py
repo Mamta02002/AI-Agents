@@ -136,7 +136,6 @@ def generate_report_and_get_images(visualizations):
 
     html += "</body></html>"
 
-    # Save HTML file
     html_path = output_dir / "analysis_report.html"
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
