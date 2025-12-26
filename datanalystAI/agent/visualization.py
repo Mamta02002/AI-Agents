@@ -151,3 +151,4 @@ def generate_report_and_get_images(visualizations):
     print(f"✅ ZIP file created: {zip_path}")
     return html_path, zip_path
 
+

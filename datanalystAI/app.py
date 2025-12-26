@@ -16,6 +16,10 @@ def index():
 def serve_export_file(filename):
     return send_from_directory('exports', filename)
 
+@app.route('/exports/<path:filename>')
+def serve_export_file(filename):
+    return send_from_directory('exports', filename)
+    
 @app.route('/output/<path:filename>')
 def serve_output_file(filename):
     return send_from_directory('output', filename)
@@ -49,3 +53,4 @@ if __name__ == '__main__':
     os.makedirs('uploads', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     app.run(debug=True)
+
