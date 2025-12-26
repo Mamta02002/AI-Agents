@@ -7,7 +7,6 @@ from pandasai import Agent
 import pandasai as pai
 import pandas as pd
 import matplotlib.pyplot as plt
-import requests
 from openai import OpenAI
 from io import StringIO
 from pandasai_litellm import LiteLLM
@@ -26,7 +25,7 @@ def generate_insights(data_summary, description, n):
     )
     
     completion = client.chat.completions.create(
-        model="qwen/qwen-2.5-72b-instruct:free",
+        model="openrouter/qwen/qwen-2.5-72b-instruct:free",
         messages=[
             {
                 "role": "user",

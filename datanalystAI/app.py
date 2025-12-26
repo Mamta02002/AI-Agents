@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, url_for, redirect, jsonify, s
 from agent.analysis import analyze_data
 import numpy as np
 import pickle
-from joblib import dump, load
 import os
 from pathlib import Path
 
@@ -11,7 +10,11 @@ app = Flask(__name__)
 # Route to serve the index.html page
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('agent_index.html')
+
+@app.route('/exports/<path:filename>')
+def serve_export_file(filename):
+    return send_from_directory('exports', filename)
 
 @app.route('/output/<path:filename>')
 def serve_output_file(filename):
