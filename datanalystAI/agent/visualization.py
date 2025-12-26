@@ -26,7 +26,7 @@ def generate_insights(data_summary, description, n):
     )
     
     completion = client.chat.completions.create(
-        model="qwen/qwen-2.5-72b-instruct:free",
+        model="openrouter/qwen/qwen-2.5-72b-instruct:free",
         messages=[
             {
                 "role": "user",
@@ -151,4 +151,5 @@ def generate_report_and_get_images(visualizations):
     print(f"✅ HTML report saved to: {html_path}")
     print(f"✅ ZIP file created: {zip_path}")
     return html_path, zip_path
+
 
