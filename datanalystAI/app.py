@@ -15,10 +15,6 @@ def index():
 @app.route('/exports/<path:filename>')
 def serve_export_file(filename):
     return send_from_directory('exports', filename)
-
-@app.route('/exports/<path:filename>')
-def serve_export_file(filename):
-    return send_from_directory('exports', filename)
     
 @app.route('/output/<path:filename>')
 def serve_output_file(filename):
