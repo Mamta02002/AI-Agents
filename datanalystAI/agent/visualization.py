@@ -25,7 +25,7 @@ def generate_insights(data_summary, description, n):
     )
     
     completion = client.chat.completions.create(
-        model="openrouter/qwen/qwen-2.5-72b-instruct:free",
+        model="qwen/qwen-2.5-72b-instruct:free",
         messages=[
             {
                 "role": "user",
