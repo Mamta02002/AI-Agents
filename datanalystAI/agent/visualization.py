@@ -25,7 +25,7 @@ def generate_insights(data_summary, description, n):
     )
     
     completion = client.chat.completions.create(
-        model="qwen/qwen-2.5-72b-instruct:free",
+        model="meta-llama/llama-3.3-70b-instruct:free",
         messages=[
             {
                 "role": "user",
@@ -61,7 +61,7 @@ def generate_insights(data_summary, description, n):
 
 def create_visualization(df, insights: str, verbose=False):
     llm = LiteLLM(
-            model="openrouter/qwen/qwen-2.5-72b-instruct:free", # Or another Qwen model available on OpenRouter
+            model="openrouter/meta-llama/llama-3.3-70b-instruct:free", # Or another Qwen model available on OpenRouter
             api_key="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", # Replace with your actual OpenRouter API key
             base_url="https://openrouter.ai/api/v1"
             )
